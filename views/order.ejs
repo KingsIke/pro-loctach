@@ -1,0 +1,205 @@
+<%- include('./partials/head') %>
+
+
+<%- include('./partials/header') %>
+<main role="main">
+    <div class="jumbotron jumbotron-other container-fluid" style="background-image: url('./Fan-Image/image.jpg');">
+        <div class="container">
+            <h1 class="display-3 text-white">
+                Ready to Order? ...So are We to Serve!
+            </h1>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="p-2 pt-md-4 pd-md-3 mx-auto text-center">
+            <h1 class="display-4">
+                You Details
+            </h1>
+        </div>
+
+        <main>
+            <aside><img src="./Fan-Image/Fan/FAN.png" alt="Kings=Ike MiLK Shop" /></aside>
+      
+            <article>
+              <!-- ADD CONTENT HERE -->
+              <h1>Order</h1>
+      
+              <div class="ice">
+                <div id="columns">
+                  <div id="title" ></div>
+                  <div id="price" ></div>
+                  
+
+                </div>
+                <p id="desc"></p>
+              </div>
+
+            </article>
+        </main>
+
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <h4 class="mb-3">Your Address</h4>
+                <form action="/order-success" method="post">
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3 form-group">
+                            <label for="firstName"> First Name</label>
+                            <input type="text" name="firstname" class="form-control" id="firstName" placeholder="Your First Name">
+                        </div>
+
+                        <div class="col-md-6 mb-3 form-group">
+                            <label for="lastName"> Last Name</label>
+                            <input type="text" name="lastname" class="form-control" id="lastName" placeholder="Your Last Name">
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label for="email">Email </label>
+                        <div class="input-group">
+                            <div class="input-group-prependd">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <input type="text" name="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+
+                    </div>
+           
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3 form-group">
+                            <label for="productType">Product Type</label>
+                            <select name="product"class="custom-select w-100" id="country">
+                                <option >Fan Vanillie</option>
+                                <option >Fan Super</option>
+                                <option >Fan Ice</option>
+                                
+                            </select>
+                           
+                        </div>
+
+                        <div class="col-md-6 mb-3 form-group">
+                            Quantity  <label for="quantity"> </label>
+                            <input type="number" name="quantity" min="1" max="500">
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <div class="mb-3 form-group">
+                        <label for="address"> Address </label>
+                      <input type="text" name="address" class="form-control" id="address" placeholder="Street">
+            
+                    </div>
+
+                    <div class="mb-3">
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3 form-group">
+                                <label for="zip">Zip</label>
+                                <input type="text" name="zip" class="form-control" id="zip" placeholder="Zip code">
+                            </div>
+
+                            <div class="col-md-6 mb-3 form-group">
+                                <label for="zip">City</label>
+                                <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3 form-group">
+                            <label for="state">State</label>
+                            <select class="custom-select w-100" name="state" id="state">
+                                <option value="" selected>[ Select one ]</option>
+                                <option value="Abia">Abia</option>
+                                <option value="Adamawa">Adamawa</option>
+                                <option value="Akwa Ibom">Akwa Ibom</option>
+                                <option value="Anambra">Anambra</option>
+                                <option value="Bauchi">Bauchi</option>
+                                <option value="Bayelsa">Bayelsa</option>
+                                <option value="Benue">Benue</option>
+                                <option value="Borno">Borno</option>
+                                <option value="Cross River">Cross River</option>
+                                <option value="Delta">Delta</option>
+                                <option value="Ebonyi">Ebonyi</option>
+                                <option value="Edo">Edo</option>
+                                <option value="Ekiti">Ekiti</option>
+                                <option value="Enugu">Enugu</option>
+                                <option value="Gombe">Gombe</option>
+                                <option value="Imo">Imo</option>
+                                <option value="Jigawa">Jigawa</option>
+                                <option value="Kaduna">Kaduna</option>
+                                <option value="Kano">Kano</option>
+                                <option value="Katsina">Katsina</option>
+                                <option value="Kebbi">Kebbi</option>
+                                <option value="Kogi">Kogi</option>
+                                <option value="Kwara">Kwara</option>
+                                <option value="Lagos">Lagos</option>
+                                <option value="Nasarawa">Nasarawa</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Ogun">Ogun</option>
+                                <option value="Ondo">Ondo</option>
+                                <option value="Osun">Osun</option>
+                                <option value="Oyo">Oyo</option>
+                                <option value="Plateau">Plateau</option>
+                                <option value="Rivers">Rivers</option>
+                                <option value="Sokoto">Sokoto</option>
+                                <option value="Taraba">Taraba</option>
+                                <option value="Yobe">Yobe</option>
+                                <option value="Zamfara">Zamfara</option>
+                                <option value="Abuja(FCT)">Abuja(FCT)</option>
+                              </select>
+                        </div>
+
+                        <div class="col-md-5 mb-3 form-group">
+                            <label for="country">Country</label>
+                            <select name="country"class="custom-select w-100" id="country">
+                                <option value="">Select Country</option>
+                                <option >South Africa</option>
+                                <option >Ghana</option>
+                                <option >Egypt</option>
+                                <option >Togo</option>
+                                <option >Niger</option>
+                                <option >South Africa</option>
+                                <option >Nigeria</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label for="remarks"> Remarks</label>
+                            <textarea class="form-control" name="remark" id="remarks" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="saveShipping">
+                            <label for="saveShipping" class="custom-control-label"> Remember my Details </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-success btn-lg btn-block mb-3" type="submit">Place your Order</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+<%- include('./partials/footer') %>

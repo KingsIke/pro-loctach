@@ -1,0 +1,40 @@
+<%- include('./partials/head') %>
+
+    <%- include('./partials/header') %>
+
+
+<!-- 
+    <% data.forEach((data)=> {%>
+        <%= data.firstname %>
+
+   <% }) %> -->
+
+
+    <% for(let o of data){%>
+        <h1>Welcome Dear <%= `${o.firstname} ${o.lastname} `%></h1>
+
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="></a>
+                </div>
+                <h4 class="card-title">
+                    <a href="#">
+                        You made an Order of <%= o.product%> of <%= o.quantity%> Quantity
+                    </a>
+                </h4>
+                <h5>Thanks for Your Patronage</h5>
+                <!-- <div class="card-footer">
+                    <a href="" class="btn btn-primary"></a>
+                </div> -->
+
+            </div>
+        </div> 
+    
+    <!-- <p></p>
+    <h1 style="color: rgb(255, 127, 255);"></h1> -->
+    <%
+    }
+    %> 
+    <%- include('./partials/footer') %>
