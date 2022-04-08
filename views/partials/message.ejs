@@ -1,0 +1,44 @@
+ <div class="container">
+
+    <% if(typeof messages != 'undefined'){ %>
+        <% messages.forEach((alert) => { %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert">
+                <%= alert.msg %>
+             
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+              </div>
+        <% }); %>
+        
+    <% } %>
+
+    <% if(success_msg != ''){%>
+        <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert">
+            <%= success_msg %>
+         
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <span class="close" aria-hidden="true" onclick="this.parentElement.style.display='none';"></span>
+          </div>
+    <%} %>
+
+    <% if(error_msg != ''){%>
+        <div class="alert alert-error alert-dismissible fade show" role="alert" id="alert">
+            <%= error_msg %>
+         
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+          </div>
+    <%}
+    %>
+
+    <% if(error != ''){%>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert">
+            <%= error %>
+         
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+          </div>
+    <%}
+    %>
+
+</div>

@@ -1,9 +1,15 @@
-// const express = require('express');
-// const userController = require('../controllers/user');
-// const router = express.Router();
+const express = require('express');
+const userController = require('../controllers/user');
+const router = express.Router();
 
-// router.get('/login',userController.getLogin)
+router.get('/login',userController.getLogin)
 
-// router.get('/register', userController.getRegister)
+router.post('/login', userController.postLogin)
 
-//  module.exports = router;
+router.get('/register', userController.getRegister)
+
+router.post('/register', userController.postRegister)
+
+router.get('/logout', userController.getLogout)
+
+ module.exports = router;

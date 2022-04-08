@@ -1,0 +1,86 @@
+<%- include('./partials/head') %>
+
+<%- include('./partials/header') %>
+
+
+<div class="wrapper ">
+    <div class="logo"> <img src="./Fan-Image/Facebook Post 940x788 px (1).gif"alt=""> </div>
+   
+    <div class="text-center mt-4 name"> KINGSIKE ICE-CREAMS </div>
+
+    <%- include('./partials/message') %>
+    
+    <form class="p-3 mt-3" action="/register" method="post">
+        
+        <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> 
+            <input type="text" name="username" id="username" placeholder="Username" value="<%= typeof username != 'undefined' ? username : '' %>"> </div>
+        <div class="form-field d-flex align-items-center"> 
+            <span class="fas fa-key"></span> 
+            <input type="email" name="email" id="email" placeholder="Email"value="<%= typeof email != 'undefined' ? email : '' %>">
+        </div> 
+        <div class="form-field d-flex align-items-center"> 
+            <span class="fas fa-key"></span> 
+            <input type="password" name="password" id="password" placeholder="Password" value="<%= typeof password != 'undefined' ? password : '' %>">
+        </div> 
+            
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span> 
+            <input type="password" name="password1" id="password1" placeholder="Confirm Password" value="<%= typeof password != 'undefined' ? password : '' %>">
+        </div> 
+        <!-- <button class="btn mt-3 bg-danger">Submit</button> -->
+        <div class="d-grid gap-2 col-6 mx-auto mt-3">
+                      
+            <button class="btn btn-secondary border rounded-pill bg-danger text-light" type="submit">Register</button>
+          </div>
+    </form>
+    <div class="text-center fs-6"> <a href="#"class="text-danger">Forget password?</a> or <a href="/login">Log-In</a> </div>
+</div>
+
+
+
+    <!-- <div class="row mt-5 ">
+        <div class="col-md-4 m-auto bg-light mb-3 " >
+            <div class="card card-body  mb-4 mt-2 shadow-lg p-3 mb-5 bg-body rounded">
+                <div class="logo"> <img src="./Fan-Image/Facebook Post 940x788 px (1).gif"alt=""> </div>
+                <div class="text-center mt-4 name"> KINGSIKE ICE-CREAMS </div>
+    
+                <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i></h1>
+                <form action="/register" method="post">
+                    <div class="form-group">
+                        <label for="name"></label>
+                        <input type="text" name="name" id="name" class="form-control border rounded-pill bg-light"
+                        placeholder="User-Name" value="<%= typeof name != 'undefined' ? name : '' %>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" class="form-control border rounded-pill bg-light"
+                        placeholder="Email" value="<%= typeof email != 'undefined' ? email : '' %>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" class="form-control border rounded-pill bg-light"
+                        placeholder="Password" value="<%= typeof password != 'undefined' ? password : '' %>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"></label>
+                        <input type="password" name="password1" id="password1" class="form-control border rounded-pill bg-light"
+                        placeholder="Confirm Password" value="<%= typeof password != 'undefined' ? password : '' %>">
+                    </div> -->
+
+                    <!-- <button class="btn btn-primary btn-block">login</button> -->
+                    <!-- <div class="d-grid gap-2 col-6 mx-auto mt-3">
+                      
+                        <button class="btn btn-secondary border rounded-pill bg-light text-danger" type="submit">Submit</button>
+                      </div>
+                </form>
+
+                <p class="lead mt-4">Have An Account? <a href="/login">login</a></p>
+            </div>
+        </div> 
+    </div> -->
+
+
+<%- include('./partials/footer')%>

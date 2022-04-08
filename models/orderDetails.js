@@ -32,8 +32,8 @@
 const mongoose = require('mongoose');
 // const mongoose = require('../config/db');
 
-const Schema = mongoose.Schema;
-const orderSchema = new Schema({
+// const Schema = mongoose.Schema;
+const orderSchema = new mongoose.Schema({
     firstname:{
         type:String,
         lowercase:true,
@@ -49,7 +49,6 @@ const orderSchema = new Schema({
     },
     email:{
         type:String,
-        unique:true,
         lowercase:true,
         trim:true
     },

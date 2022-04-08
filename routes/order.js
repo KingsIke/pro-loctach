@@ -1,5 +1,7 @@
 const express = require('express');
-const orderController = require('../controllers/order')
+const orderController = require('../controllers/order');
+const { ensureAuthenticated} = require('../config/auth');
+
 
 const router = express.Router()
 
@@ -26,7 +28,11 @@ router.get('/order-success', orderController.getSuccess);
 
 router.get('/contact' , orderController.getContact);
 
+
+router.get('/dashboard',ensureAuthenticated ,orderController.getDashboard );
+
 router.get('*' ,orderController.getError );
+
 
 
 module.exports = router;

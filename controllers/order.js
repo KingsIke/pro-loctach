@@ -134,8 +134,14 @@ exports.getContact =  (req,res) => {
 }
 
 
+exports.getDashboard = (req,res) => {
+    res.render('dashboard', {title:'DashBoard',path:'/dashboard',name: req.userName});
+}
+
 
 
 exports.getError = (req,res) => {
     res.status(404).render('404', {title:'Bad Page',path:'*'});
 }
+
+
